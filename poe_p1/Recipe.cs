@@ -64,9 +64,9 @@ namespace poe_p1
             Steps.Clear();
         }
 
-        internal void AddIngredient(string? name, double quantity, string? unit)
+        public void AddIngredient(string name, double quantity, string unit)
         {
-            throw new NotImplementedException();
+            Ingredient.Add(new Ingredient { Name = name, Quantity = quantity, Unit = unit });
         }
     }
 }

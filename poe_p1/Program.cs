@@ -22,7 +22,42 @@ namespace RecipeScaler
            
             while (true)
             {
-                Console.WriteLine("Enter the number of ingredients:");
+                Console.WriteLine("Welcome to the Donor Management App!");
+                Console.WriteLine("Please select an option:");
+                Console.WriteLine("1. Ingredient");
+                Console.WriteLine("2. Show Steps");
+                Console.WriteLine("3. View Recipe");
+                Console.WriteLine("4. Exit");
+
+                Console.Write("Enter your choice: ");
+                int menuChoice = Convert.ToInt32(Console.ReadLine());
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        AddIngredient();
+                        break;
+                    case "2":
+                        AddStep();
+                        break;
+                    case "3":
+                        PrintRecipe();
+                        break;
+                    case "4":
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input. Please try again.");
+                        break;
+                }
+            
+        
+
+
+
+
+        Console.WriteLine("Enter the number of ingredients:");
                 int numIngredients = int.Parse(Console.ReadLine());
                  
                 for (int i = 0; i < numIngredients; i++)
@@ -86,6 +121,21 @@ ClearRecipe();
                         break;
                 }
             }
+        }
+
+        private static void PrintRecipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void AddStep()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void AddIngredient()
+        {
+            throw new NotImplementedException();
         }
     }
 }
