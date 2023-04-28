@@ -62,13 +62,13 @@ namespace RecipeScaler
                  
                 for (int i = 0; i < numIngredients; i++)
                 {
-                    Console.WriteLine($"Enter ingredient {i + 1} name:");
+                    Console.WriteLine($"Enter ingredient name:");
                     string name = Console.ReadLine();
 
-                    Console.WriteLine($"Enter ingredient {i + 1} quantity:");
+                    Console.WriteLine($"Enter ingredient  quantity:");
                     double quantity = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine($"Enter ingredient {i + 1} unit of measurement:");
+                    Console.WriteLine($"Enter ingredient  unit of measurement:");
                     string unit = Console.ReadLine();
 
                     recipe.AddIngredient(name, quantity, unit);
@@ -79,7 +79,7 @@ namespace RecipeScaler
 
                 for (int i = 0; i < numSteps; i++)
                 {
-                    Console.WriteLine($"Enter step {i + 1} description:");
+                    Console.WriteLine($"Enter step  description:");
                     string description = Console.ReadLine();
 
                     recipe.AddStep(description);

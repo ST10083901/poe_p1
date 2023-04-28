@@ -36,7 +36,7 @@ namespace poe_p1
             Console.WriteLine("\nSteps:");
             for (int i = 0; i < Steps.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {Steps[i].Description}");
+                Console.WriteLine($". {Steps[i].Description}");
             }
         }
 
