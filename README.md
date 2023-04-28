@@ -13,21 +13,11 @@
  <li><strong>Scale Recipe:</strong> The user can request that the recipe is scaled by a factor of 0.5 (half), 2 (double), or 3 (triple). All the ingredient quantities are changed accordingly when the recipe is displayed.</li>
  <li><strong>Reset Quantities:</strong> The user can request that the quantities be reset to the original values.</li>
  <li><strong>Clear Data:</strong> The user can clear all the data to enter a new recipe.</li>
- <li><strong>No Persistent Data:</strong> The software does not persist user data between runs. The data is only stored in memory while the software is running.</li>
-</ol>
+ 
 
 <h2>Technologies Used</h2>
 <p>The Recipe Application was developed using C# and Visual Studio.</p>
 
-<h2>Getting Started</h2>
-<p>To use the Recipe Application, follow these steps:</p>
-<ol>
- <li>Clone the repository or download the source code.</li>
- <li>Open the solution in Visual Studio.</li>
- <li>Build the solution.</li>
- <li>Run the application.</li>
- <li>Follow the prompts to enter the details of your recipe, display the recipe, and make any necessary adjustments.</li>
-</ol>
 
 <h2>Contributing</h2>
 <p>If you would like to contribute to the Recipe Application, please follow these steps:</p>
