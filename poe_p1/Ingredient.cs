@@ -14,22 +14,43 @@ namespace poe_p1
 
         }
 
-        public Ingredient(string name, double quantity, string unit)
+        public string Name { get; }
+        public double Quantity { get; private set; }
+        public string Unit { get; }
+        public int Calories { get; }
+        public string FoodGroup { get; }
+
+        public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
         {
             Name = name;
             Quantity = quantity;
             Unit = unit;
-            Ingredients = new List<Ingredient>();
+            Calories = calories;
+            FoodGroup = foodGroup;
+        }
+        public void AddIngredient(Ingredient ingredient)
+        {
+            Ingredient.Add(ingredient);
         }
 
-        public string Name { get; set; }
-            public double Quantity { get; set; }
-            public string Unit { get; set; }
-        public List<Ingredient> Ingredients { get; set; }
+        private static void Add(Ingredient ingredient)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void ScaleQuantity(double factor)
+        {
+            Quantity *= factor;
+        }
+        public void ResetQuantity()
+        {
+            Quantity = 0;
+        }
 
-
-        
+        internal static void Clear()
+        {
+            throw new NotImplementedException();
+        }
     }
+ 
 
-}

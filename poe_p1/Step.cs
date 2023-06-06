@@ -2,6 +2,10 @@
 {
     internal class Step : Steps
     {
+        public Step(string description) : base(description)
+        {
+        }
+
         public string Description { get; set; }
     }
 }
