@@ -1,19 +1,16 @@
 ﻿
 
 
-
 using poe_p1;
-using POE_P1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RecipeApplication
+namespace poe_p1
 {
     class Program
     {
         static List<Recipe> recipes = new List<Recipe>();
-        RecipeMenu recipeMenu = new RecipeMenu();
 
         static void Main(string[] args)
         {
@@ -60,16 +57,6 @@ namespace RecipeApplication
             }
         }
 
-        private static void ClearAllData()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void ResetQuantities()
-        {
-            throw new NotImplementedException();
-        }
-
         static void EnterRecipeDetails()
         {
             Console.Write("Enter the recipe name: ");
@@ -78,7 +65,12 @@ namespace RecipeApplication
             Recipe recipe = new Recipe(name);
 
             Console.Write("Enter the number of ingredients: ");
-            int ingredientCount = int.Parse(Console.ReadLine());
+            int ingredientCount;
+            if (!int.TryParse(Console.ReadLine(), out ingredientCount))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                return;
+            }
 
             for (int i = 0; i < ingredientCount; i++)
             {
@@ -86,11 +78,21 @@ namespace RecipeApplication
                 Console.Write("Name: ");
                 string ingredientName = Console.ReadLine();
                 Console.Write("Quantity: ");
-                double quantity = double.Parse(Console.ReadLine());
+                double quantity;
+                if (!double.TryParse(Console.ReadLine(), out quantity))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    return;
+                }
                 Console.Write("Unit of measurement: ");
                 string unit = Console.ReadLine();
                 Console.Write("Calories: ");
-                int calories = int.Parse(Console.ReadLine());
+                int calories;
+                if (!int.TryParse(Console.ReadLine(), out calories))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    return;
+                }
                 Console.Write("Food group: ");
                 string foodGroup = Console.ReadLine();
 
@@ -98,7 +100,12 @@ namespace RecipeApplication
             }
 
             Console.Write("Enter the number of steps: ");
-            int stepCount = int.Parse(Console.ReadLine());
+            int stepCount;
+            if (!int.TryParse(Console.ReadLine(), out stepCount))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                return;
+            }
 
             for (int i = 0; i < stepCount; i++)
             {
@@ -140,7 +147,12 @@ namespace RecipeApplication
             }
 
             Console.Write("Enter the recipe number: ");
-            int recipeNumber = int.Parse(Console.ReadLine());
+            int recipeNumber;
+            if (!int.TryParse(Console.ReadLine(), out recipeNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                return;
+            }
 
             if (recipeNumber >= 1 && recipeNumber <= recipes.Count)
             {
@@ -153,7 +165,6 @@ namespace RecipeApplication
             }
         }
 
-
         static void ScaleRecipe()
         {
             if (recipes.Count == 0)
@@ -163,14 +174,24 @@ namespace RecipeApplication
             }
 
             Console.Write("Enter the recipe number: ");
-            int recipeNumber = int.Parse(Console.ReadLine());
+            int recipeNumber;
+            if (!int.TryParse(Console.ReadLine(), out recipeNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                return;
+            }
 
             if (recipeNumber >= 1 && recipeNumber <= recipes.Count)
             {
                 Recipe recipe = recipes[recipeNumber - 1];
 
                 Console.Write("Enter the scale factor (0.5, 2, or 3): ");
-                double factor = double.Parse(Console.ReadLine());
+                double factor;
+                if (!double.TryParse(Console.ReadLine(), out factor))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    return;
+                }
 
                 recipe.Scale(factor);
                 Console.WriteLine("Recipe scaled successfully!");
@@ -181,7 +202,7 @@ namespace RecipeApplication
             }
         }
 
-        static void ResetQuantities2()
+        private static void ResetQuantities()
         {
             if (recipes.Count == 0)
             {
@@ -190,12 +211,17 @@ namespace RecipeApplication
             }
 
             Console.Write("Enter the recipe number: ");
-            int recipeNumber = int.Parse(Console.ReadLine());
+            int recipeNumber;
+            if (!int.TryParse(Console.ReadLine(), out recipeNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                return;
+            }
 
             if (recipeNumber >= 1 && recipeNumber <= recipes.Count)
             {
                 Recipe recipe = recipes[recipeNumber - 1];
-                recipe.ResetQuantities2();
+                recipe.ResetQuantities();
                 Console.WriteLine("Quantities reset successfully!");
             }
             else
@@ -204,7 +230,7 @@ namespace RecipeApplication
             }
         }
 
-        static void ClearAllData2()
+        private static void ClearAllData()
         {
             recipes.Clear();
             Console.WriteLine("All data cleared successfully!");

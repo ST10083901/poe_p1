@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POE_P1
+namespace poe_p1
 {
     internal class RecipeMenu
     {

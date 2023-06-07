@@ -1,4 +1,5 @@
-﻿using System;
+﻿using poe_p1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace poe_p1
         }
 
 
-     
+
 
 
         public void AddStep(Step step)
@@ -107,7 +108,13 @@ namespace poe_p1
         {
             throw new NotImplementedException();
         }
+
+        internal void ResetQuantities()
+        {
+            throw new NotImplementedException();
+        }
     }
+}
 
      /*    public void AddIngredient(string name, double quantity, string unit, int calories, string foodGroup)
         {
@@ -129,4 +136,4 @@ namespace poe_p1
             throw new NotImplementedException();
         }
     }
-}
+}*/

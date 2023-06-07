@@ -33,6 +33,7 @@ namespace poe_p1
             Ingredient.Add(ingredient);
         }
 
+
         private static void Add(Ingredient ingredient)
         {
             throw new NotImplementedException();
@@ -52,5 +53,5 @@ namespace poe_p1
             throw new NotImplementedException();
         }
     }
- 
+}
 
