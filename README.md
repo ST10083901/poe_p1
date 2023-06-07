@@ -14,6 +14,22 @@
  <li><strong>Reset Quantities:</strong> The user can request that the quantities be reset to the original values.</li>
  <li><strong>Clear Data:</strong> The user can clear all the data to enter a new recipe.</li>
  
+ <h2>Updated Features</h2>
+  <ol>
+    <li>The user shall be able to enter an unlimited number of recipes.</li>
+    <li>The user shall be able to enter a name for each recipe.</li>
+    <li>The software shall display a list of all the recipes to the user in alphabetical order by name.</li>
+    <li>The user can choose which recipe to display from the list.</li>
+    <li>For each ingredient, the user shall additionally be able to enter:
+      <ol type="a">
+        <li>The number of calories.</li>
+        <li>The food group that the ingredient belongs to.</li>
+      </ol>
+    </li>
+    <li>The software shall calculate and display the total calories of all the ingredients in a recipe.</li>
+    <li>The software shall notify the user when the total calories of a recipe exceed 300.</li>
+  </ol>
+  
 
 <h2>Technologies Used</h2>
 <p>The Recipe Application was developed using C# and Visual Studio.</p>
