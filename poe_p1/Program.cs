@@ -36,7 +36,7 @@ namespace poe_p1
                         DisplayRecipeList();
                         break;
                     case "3":
-                        DisplayRecipe();
+                        DisplayRecipeMenu();
                         break;
                     case "4":
                         ScaleRecipe();
@@ -138,7 +138,7 @@ namespace poe_p1
             }
         }
 
-        static void DisplayRecipe()
+        static void DisplayRecipeMenu()
         {
             if (recipes.Count == 0)
             {
