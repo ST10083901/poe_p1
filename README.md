@@ -29,7 +29,42 @@
     <li>The software shall calculate and display the total calories of all the ingredients in a recipe.</li>
     <li>The software shall notify the user when the total calories of a recipe exceed 300.</li>
   </ol>
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe App</title>
+</head>
+<body>
+  <h1>Recipe App</h1>
   
+  <h2>Description</h2>
+  <p>A recipe application with features to manage and preview recipes, scale recipes, and print recipes.</p>
+
+  <h2>Installation</h2>
+  <p>To run the Recipe App, follow these steps:</p>
+  <ol>
+    <li>Clone the repository.</li>
+    <li>Open the project in Visual Studio or any other compatible development environment.</li>
+    <li>Build and run the project.</li>
+  </ol>
+
+  <h2>Usage</h2>
+  <p>Once the Recipe App is running, you can use the following tabs:</p>
+  <ul>
+    <li><strong>Home:</strong> Displays a welcome message and an exit button.</li>
+    <li><strong>Recipes:</strong> Allows you to manage and preview recipes, add ingredients, and delete recipes.</li>
+    <li><strong>Scale, Print:</strong> Provides options to scale and print recipes.</li>
+  </ul>
+
+  <h2>Contributing</h2>
+  <p>Contributions are welcome! If you have any ideas or improvements, feel free to submit a pull request.</p>
+
+  <h2>License</h2>
+  <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+</body>
+</html>
+
 
 <h2>Technologies Used</h2>
 <p>The Recipe Application was developed using C# and Visual Studio.</p>
